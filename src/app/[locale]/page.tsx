@@ -28,8 +28,8 @@ function HeroSection({ locale }: { locale: string }) {
         </h1>
         <p className="text-gray-500 text-lg mb-8">
           {locale === "ar"
-            ? "اكتشفي أفضل منتجات الميك اب والعطور والعناية بالبشرة"
-            : "Discover the best makeup, perfume and skincare products"}
+            ? "اكتشفي أفضل منتجات الميك اب والعناية بالبشرة"
+            : "Discover the best makeup and skincare products"}
         </p>
         <Link
           href={`/${locale}/products`}
