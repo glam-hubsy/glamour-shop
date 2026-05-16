@@ -3,6 +3,7 @@
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 import { ShoppingCart, User, Globe, Menu, X } from "lucide-react";
+import Logo from "./Logo";
 import { useState } from "react";
 import { useCartStore } from "@/store/cartStore";
 import { usePathname, useRouter } from "next/navigation";
@@ -29,8 +30,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href={`/${locale}`} className="text-2xl font-bold text-rose-500">
-            Glam Hub
+          <Link href={`/${locale}`} className="flex items-center">
+            <Logo size={36} />
           </Link>
 
           {/* Desktop Nav */}
