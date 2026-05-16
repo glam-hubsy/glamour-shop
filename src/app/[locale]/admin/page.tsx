@@ -74,6 +74,8 @@ export default function AdminPage() {
       price: String(p.price),
       stock: String(p.stock),
       category: p.category,
+      usage_area: p.usage_area || "",
+      brand: p.brand || "",
       image_url: p.image_url,
       is_featured: p.is_featured,
     });
