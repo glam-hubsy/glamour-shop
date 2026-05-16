@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 import "../globals.css";
 
 export const metadata: Metadata = {
-  title: "Glamour Shop | متجر غلامور",
+  title: "Glam Hub | جلام هاب",
   description: "ميك اب | عطور | سكين كير",
 };
 

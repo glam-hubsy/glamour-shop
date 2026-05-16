@@ -30,7 +30,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href={`/${locale}`} className="text-2xl font-bold text-rose-500">
-            Glamour
+            Glam Hub
           </Link>
 
           {/* Desktop Nav */}
