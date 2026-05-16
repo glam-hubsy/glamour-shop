@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import Navbar from "@/components/layout/Navbar";
 import { Toaster } from "react-hot-toast";
 import type { Metadata } from "next";
+import "../globals.css";
 
 export const metadata: Metadata = {
   title: "Glamour Shop | متجر غلامور",
