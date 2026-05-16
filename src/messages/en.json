@@ -10,8 +10,20 @@
   "categories": {
     "all": "All",
     "makeup": "Makeup",
-    "perfume": "Perfume",
     "skincare": "Skin Care"
+  },
+  "usage": {
+    "all": "All Areas",
+    "face": "Face",
+    "eye": "Eye",
+    "eyebrow": "Eyebrow",
+    "lips": "Lips"
+  },
+  "filter": {
+    "by_category": "By Category",
+    "by_usage": "By Usage",
+    "by_brand": "By Brand",
+    "all_brands": "All Brands"
   },
   "home": {
     "hero_title": "Your Beauty, Your Style",

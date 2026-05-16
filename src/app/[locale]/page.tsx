@@ -52,13 +52,6 @@ function CategoriesSection({ locale }: { locale: string }) {
       color: "from-rose-100 to-pink-100",
     },
     {
-      key: "perfume",
-      icon: "🌹",
-      label_ar: "عطور",
-      label_en: "Perfume",
-      color: "from-purple-100 to-violet-100",
-    },
-    {
       key: "skincare",
       icon: "✨",
       label_ar: "سكين كير",

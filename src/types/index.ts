@@ -1,6 +1,10 @@
 export type Locale = "ar" | "en";
 
-export type Category = "makeup" | "perfume" | "skincare";
+export type Category = "makeup" | "skincare";
+
+export type UsageArea = "face" | "eye" | "eyebrow" | "lips";
+
+export type Brand = string;
 
 export interface Product {
   id: string;
@@ -11,6 +15,8 @@ export interface Product {
   price: number;
   stock: number;
   category: Category;
+  usage_area: UsageArea | null;
+  brand: string;
   image_url: string;
   is_featured: boolean;
   created_at: string;

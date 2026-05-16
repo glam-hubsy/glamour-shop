@@ -22,7 +22,7 @@ export default function Navbar() {
     router.push(newPath);
   };
 
-  const categories = ["makeup", "perfume", "skincare"] as const;
+  const categories = ["makeup", "skincare"] as const;
 
   return (
     <nav className="bg-white shadow-sm sticky top-0 z-50" dir={locale === "ar" ? "rtl" : "ltr"}>

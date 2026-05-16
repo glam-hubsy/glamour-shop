@@ -15,6 +15,8 @@ const emptyForm = {
   price: "",
   stock: "",
   category: "makeup" as Category,
+  usage_area: "" as string,
+  brand: "",
   image_url: "",
   is_featured: false,
 };
@@ -79,8 +81,15 @@ export default function AdminPage() {
     setShowForm(true);
   };
 
-  const categories: Category[] = ["makeup", "perfume", "skincare"];
-  const categoryLabels = { makeup: isAr ? "ميك اب" : "Makeup", perfume: isAr ? "عطور" : "Perfume", skincare: isAr ? "سكين كير" : "Skin Care" };
+  const categories: Category[] = ["makeup", "skincare"];
+  const categoryLabels = { makeup: isAr ? "ميك اب" : "Makeup", skincare: isAr ? "سكين كير" : "Skin Care" };
+  const usageAreas = [
+    { key: "", label: isAr ? "-- بدون --" : "-- None --" },
+    { key: "face", label: isAr ? "وجه" : "Face" },
+    { key: "eye", label: isAr ? "عين" : "Eye" },
+    { key: "eyebrow", label: isAr ? "حواجب" : "Eyebrow" },
+    { key: "lips", label: isAr ? "تم" : "Lips" },
+  ];
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8" dir={isAr ? "rtl" : "ltr"}>
@@ -161,6 +170,10 @@ export default function AdminPage() {
               <select className="w-full border rounded-xl px-3 py-2 text-sm" value={form.category} onChange={e => setForm(f => ({...f, category: e.target.value as Category}))}>
                 {categories.map(c => <option key={c} value={c}>{categoryLabels[c]}</option>)}
               </select>
+              <select className="w-full border rounded-xl px-3 py-2 text-sm" value={form.usage_area} onChange={e => setForm(f => ({...f, usage_area: e.target.value}))}>
+                {usageAreas.map(u => <option key={u.key} value={u.key}>{u.label}</option>)}
+              </select>
+              <input className="border rounded-xl px-3 py-2 text-sm w-full" placeholder={isAr ? "الماركة (مثل: MAC، NYX)" : "Brand (e.g. MAC, NYX)"} value={form.brand} onChange={e => setForm(f => ({...f, brand: e.target.value}))} />
               <input className="border rounded-xl px-3 py-2 text-sm w-full" placeholder="Image URL" value={form.image_url} onChange={e => setForm(f => ({...f, image_url: e.target.value}))} />
               <label className="flex items-center gap-2 text-sm">
                 <input type="checkbox" checked={form.is_featured} onChange={e => setForm(f => ({...f, is_featured: e.target.checked}))} />

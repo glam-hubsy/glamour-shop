@@ -10,8 +10,20 @@
   "categories": {
     "all": "الكل",
     "makeup": "ميك اب",
-    "perfume": "عطور",
     "skincare": "سكين كير"
+  },
+  "usage": {
+    "all": "كل المناطق",
+    "face": "وجه",
+    "eye": "عين",
+    "eyebrow": "حواجب",
+    "lips": "تم"
+  },
+  "filter": {
+    "by_category": "حسب الفئة",
+    "by_usage": "حسب الاستخدام",
+    "by_brand": "حسب الماركة",
+    "all_brands": "كل الماركات"
   },
   "home": {
     "hero_title": "جمالك، أسلوبك",
