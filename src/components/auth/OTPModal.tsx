@@ -10,13 +10,16 @@ type Step = "phone" | "otp" | "profile";
 type Channel = "sms" | "whatsapp";
 
 const countryCodes = [
+  { code: "+963", flag: "🇸🇾", name: "Syria" },
   { code: "+971", flag: "🇦🇪", name: "UAE" },
   { code: "+966", flag: "🇸🇦", name: "KSA" },
   { code: "+962", flag: "🇯🇴", name: "Jordan" },
   { code: "+961", flag: "🇱🇧", name: "Lebanon" },
   { code: "+965", flag: "🇰🇼", name: "Kuwait" },
   { code: "+974", flag: "🇶🇦", name: "Qatar" },
+  { code: "+964", flag: "🇮🇶", name: "Iraq" },
   { code: "+20", flag: "🇪🇬", name: "Egypt" },
+  { code: "+212", flag: "🇲🇦", name: "Morocco" },
   { code: "+90", flag: "🇹🇷", name: "Turkey" },
 ];
 
@@ -26,7 +29,7 @@ export default function OTPModal({ onClose }: { onClose: () => void }) {
 
   const [step, setStep] = useState<Step>("phone");
   const [channel, setChannel] = useState<Channel>("whatsapp");
-  const [countryCode, setCountryCode] = useState("+971");
+  const [countryCode, setCountryCode] = useState("+963");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [otp, setOtp] = useState("");
   const [loading, setLoading] = useState(false);
