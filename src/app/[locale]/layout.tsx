@@ -3,6 +3,7 @@ import { getMessages } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/layout/Navbar";
+import AutoShowModal from "@/components/auth/AutoShowModal";
 import { Toaster } from "react-hot-toast";
 import type { Metadata } from "next";
 import "../globals.css";
@@ -36,6 +37,7 @@ export default async function LocaleLayout({
       <body className="bg-gray-50 min-h-screen">
         <NextIntlClientProvider messages={messages}>
           <Navbar />
+          <AutoShowModal />
           <main>{children}</main>
           <Toaster position="top-center" />
         </NextIntlClientProvider>
