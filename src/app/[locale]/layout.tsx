@@ -4,6 +4,7 @@ import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/layout/Navbar";
 import AutoShowModal from "@/components/auth/AutoShowModal";
+import SplashScreen from "@/components/SplashScreen";
 import { Toaster } from "react-hot-toast";
 import type { Metadata } from "next";
 import "../globals.css";
@@ -36,6 +37,7 @@ export default async function LocaleLayout({
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
       <body className="bg-gray-50 min-h-screen">
         <NextIntlClientProvider messages={messages}>
+          <SplashScreen />
           <Navbar />
           <AutoShowModal />
           <main>{children}</main>

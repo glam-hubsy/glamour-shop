@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { getLocale } from "next-intl/server";
+import BrandSlider from "@/components/BrandSlider";
 
 export default async function HomePage() {
   const locale = await getLocale();
@@ -9,6 +10,7 @@ export default async function HomePage() {
   return (
     <div dir={isAr ? "rtl" : "ltr"}>
       <HeroSection isAr={isAr} locale={locale} />
+      <BrandSlider isAr={isAr} locale={locale} />
       <CategoriesSection isAr={isAr} locale={locale} />
       <FeaturesSection isAr={isAr} />
       <BannerSection isAr={isAr} locale={locale} />
