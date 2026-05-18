@@ -76,7 +76,7 @@ export default function ProductsClient() {
             key={tab.key}
             onClick={() => setFilterMode(tab.key as any)}
             className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
-              filterMode === tab.key ? "bg-rose-500 text-white" : "bg-white text-gray-500 border hover:bg-rose-50"
+              filterMode === tab.key ? "bg-[#e91e8c] text-white" : "bg-white text-gray-500 border hover:bg-pink-50"
             }`}
           >
             {isAr ? tab.ar : tab.en}
@@ -88,25 +88,25 @@ export default function ProductsClient() {
       <div className="flex gap-2 flex-wrap mb-8">
         {filterMode === "category" && categories.map((cat) => (
           <button key={cat.key} onClick={() => setCategory(cat.key)}
-            className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${category === cat.key ? "bg-rose-500 text-white" : "bg-white text-gray-600 hover:bg-rose-50 border"}`}>
+            className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${category === cat.key ? "bg-[#e91e8c] text-white" : "bg-white text-gray-600 hover:bg-pink-50 border"}`}>
             {isAr ? cat.ar : cat.en}
           </button>
         ))}
         {filterMode === "usage" && usageAreas.map((area) => (
           <button key={area.key} onClick={() => setUsage(area.key)}
-            className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${usage === area.key ? "bg-rose-500 text-white" : "bg-white text-gray-600 hover:bg-rose-50 border"}`}>
+            className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${usage === area.key ? "bg-[#e91e8c] text-white" : "bg-white text-gray-600 hover:bg-pink-50 border"}`}>
             {isAr ? area.ar : area.en}
           </button>
         ))}
         {filterMode === "brand" && (
           <>
             <button onClick={() => setBrand("all")}
-              className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${brand === "all" ? "bg-rose-500 text-white" : "bg-white text-gray-600 hover:bg-rose-50 border"}`}>
+              className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${brand === "all" ? "bg-[#e91e8c] text-white" : "bg-white text-gray-600 hover:bg-pink-50 border"}`}>
               {isAr ? "كل الماركات" : "All Brands"}
             </button>
             {brands.map((b) => (
               <button key={b} onClick={() => setBrand(b)}
-                className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${brand === b ? "bg-rose-500 text-white" : "bg-white text-gray-600 hover:bg-rose-50 border"}`}>
+                className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${brand === b ? "bg-[#e91e8c] text-white" : "bg-white text-gray-600 hover:bg-pink-50 border"}`}>
                 {b}
               </button>
             ))}

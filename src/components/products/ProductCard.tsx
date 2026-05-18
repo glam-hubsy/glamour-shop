@@ -26,7 +26,7 @@ export default function ProductCard({ product }: Props) {
 
   return (
     <div className="bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow overflow-hidden group">
-      <div className="relative h-56 bg-rose-50">
+      <div className="relative h-56 bg-pink-50">
         {product.image_url ? (
           <Image
             src={product.image_url}
@@ -40,7 +40,7 @@ export default function ProductCard({ product }: Props) {
           </div>
         )}
         {product.is_featured && (
-          <span className="absolute top-2 start-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">
+          <span className="absolute top-2 start-2 bg-[#e91e8c] text-white text-xs px-2 py-1 rounded-full">
             {locale === "ar" ? "مميز" : "Featured"}
           </span>
         )}
@@ -48,7 +48,7 @@ export default function ProductCard({ product }: Props) {
 
       <div className="p-4" dir={locale === "ar" ? "rtl" : "ltr"}>
         <h3 className="font-semibold text-gray-800 truncate">{name}</h3>
-        <p className="text-rose-500 font-bold mt-1">${product.price}</p>
+        <p className="text-[#e91e8c] font-bold mt-1">${product.price}</p>
 
         <div className="flex items-center justify-between mt-3">
           <span className={`text-xs ${product.stock > 0 ? "text-green-500" : "text-red-400"}`}>
@@ -57,7 +57,7 @@ export default function ProductCard({ product }: Props) {
           <button
             onClick={handleAdd}
             disabled={product.stock === 0}
-            className="flex items-center gap-1 bg-rose-500 text-white px-3 py-1.5 rounded-lg text-sm hover:bg-rose-600 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+            className="flex items-center gap-1 bg-[#e91e8c] text-white px-3 py-1.5 rounded-lg text-sm hover:bg-[#c2177a] transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
           >
             <ShoppingCart size={14} />
             {t("add_to_cart")}
