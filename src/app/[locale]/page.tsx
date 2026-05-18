@@ -34,19 +34,19 @@ function HeroSection({ isAr, locale }: { isAr: boolean; locale: string }) {
       </div>
 
       {/* Decorative circles */}
-      <div className="absolute top-20 right-20 w-64 h-64 bg-purple-600/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 left-20 w-48 h-48 bg-purple-400/10 rounded-full blur-2xl" />
+      <div className="absolute top-20 right-20 w-64 h-64 bg-pink-600/20 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 left-20 w-48 h-48 bg-pink-400/10 rounded-full blur-2xl" />
 
       <div className="relative max-w-7xl mx-auto px-6 py-24 w-full">
         <div className="max-w-xl">
-          <span className="inline-block bg-purple-600/20 text-purple-300 text-sm font-medium px-4 py-1.5 rounded-full mb-6 border border-purple-500/30">
+          <span className="inline-block bg-pink-600/20 text-pink-300 text-sm font-medium px-4 py-1.5 rounded-full mb-6 border border-pink-500/30">
             {isAr ? "✨ وصل الجديد" : "✨ New Arrivals"}
           </span>
           <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
             {isAr ? (
-              <>جمالك<br /><span className="text-purple-400">أسلوبك</span></>
+              <>جمالك<br /><span className="text-[#f48cbf]">أسلوبك</span></>
             ) : (
-              <>Your Beauty,<br /><span className="text-purple-400">Your Style</span></>
+              <>Your Beauty,<br /><span className="text-[#f48cbf]">Your Style</span></>
             )}
           </h1>
           <p className="text-gray-300 text-lg mb-10 leading-relaxed">
@@ -57,13 +57,13 @@ function HeroSection({ isAr, locale }: { isAr: boolean; locale: string }) {
           <div className="flex flex-wrap gap-4">
             <Link
               href={`/${locale}/products`}
-              className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3.5 rounded-full font-semibold transition-all shadow-lg shadow-purple-900/40 hover:scale-105"
+              className="bg-[#e91e8c] hover:bg-[#c2177a] text-white px-8 py-3.5 rounded-full font-semibold transition-all shadow-lg shadow-pink-900/40 hover:scale-105"
             >
               {isAr ? "تسوقي الآن" : "Shop Now"}
             </Link>
             <Link
               href={`/${locale}/products`}
-              className="border border-purple-400/40 text-purple-300 hover:bg-purple-900/30 px-8 py-3.5 rounded-full font-semibold transition-all"
+              className="border border-pink-400/40 text-pink-300 hover:bg-pink-900/30 px-8 py-3.5 rounded-full font-semibold transition-all"
             >
               {isAr ? "اكتشفي المجموعة" : "Explore Collection"}
             </Link>
@@ -128,7 +128,7 @@ function CategoriesSection({ isAr, locale }: { isAr: boolean; locale: string }) 
               <h3 className="text-2xl font-bold mb-1">{isAr ? cat.label_ar : cat.label_en}</h3>
               <p className="text-gray-300 text-sm">{isAr ? cat.desc_ar : cat.desc_en}</p>
             </div>
-            <div className="absolute top-4 right-4 bg-purple-600 text-white text-xs px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+            <div className="absolute top-4 right-4 bg-[#e91e8c] text-white text-xs px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
               {isAr ? "تسوقي" : "Shop"}
             </div>
           </Link>
@@ -166,7 +166,7 @@ function FeaturesSection({ isAr }: { isAr: boolean }) {
 function BannerSection({ isAr, locale }: { isAr: boolean; locale: string }) {
   return (
     <section className="max-w-7xl mx-auto px-6 py-20">
-      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-purple-900 to-[#0f0f1a] p-12 flex flex-col md:flex-row items-center gap-8">
+      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-pink-900 to-[#0f0f1a] p-12 flex flex-col md:flex-row items-center gap-8">
         <div className="absolute inset-0 opacity-20">
           <Image
             src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=1200&q=80"
@@ -176,7 +176,7 @@ function BannerSection({ isAr, locale }: { isAr: boolean; locale: string }) {
           />
         </div>
         <div className="relative flex-1">
-          <span className="text-purple-300 text-sm font-medium mb-3 block">
+          <span className="text-pink-300 text-sm font-medium mb-3 block">
             {isAr ? "عروض خاصة" : "Special Offers"}
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -187,7 +187,7 @@ function BannerSection({ isAr, locale }: { isAr: boolean; locale: string }) {
           </p>
           <Link
             href={`/${locale}/products`}
-            className="inline-block bg-purple-500 hover:bg-purple-600 text-white px-8 py-3 rounded-full font-semibold transition-all hover:scale-105"
+            className="inline-block bg-[#e91e8c] hover:bg-[#c2177a] text-white px-8 py-3 rounded-full font-semibold transition-all hover:scale-105"
           >
             {isAr ? "احصلي على الخصم" : "Get Discount"}
           </Link>

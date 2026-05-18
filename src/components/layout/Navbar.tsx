@@ -36,7 +36,7 @@ export default function Navbar() {
   return (
     <>
       {/* Top announcement bar */}
-      <div className="bg-[#0f0f1a] text-purple-300 text-xs py-2 text-center tracking-wide">
+      <div className="bg-[#0f0f1a] text-[#f48cbf] text-xs py-2 text-center tracking-wide">
         <Sparkles size={12} className="inline mr-1 mb-0.5" />
         {isAr ? "شحن مجاني على الطلبات فوق 500 ل.س" : "Free shipping on orders over 500 SYP"}
         <Sparkles size={12} className="inline ml-1 mb-0.5" />
@@ -63,7 +63,7 @@ export default function Navbar() {
             <div className="hidden md:flex items-center gap-8">
               <Link
                 href={`/${locale}`}
-                className="text-gray-700 hover:text-purple-600 font-medium transition-colors text-sm tracking-wide"
+                className="text-gray-700 hover:text-[#e91e8c] font-medium transition-colors text-sm tracking-wide"
               >
                 {t("home")}
               </Link>
@@ -71,14 +71,14 @@ export default function Navbar() {
                 <Link
                   key={cat}
                   href={`/${locale}/products?category=${cat}`}
-                  className="text-gray-700 hover:text-purple-600 font-medium transition-colors text-sm tracking-wide"
+                  className="text-gray-700 hover:text-[#e91e8c] font-medium transition-colors text-sm tracking-wide"
                 >
                   {tCat(cat)}
                 </Link>
               ))}
               <Link
                 href={`/${locale}/products`}
-                className="text-gray-700 hover:text-purple-600 font-medium transition-colors text-sm tracking-wide"
+                className="text-gray-700 hover:text-[#e91e8c] font-medium transition-colors text-sm tracking-wide"
               >
                 {isAr ? "كل المنتجات" : "All Products"}
               </Link>
@@ -89,7 +89,7 @@ export default function Navbar() {
               {/* Language switcher */}
               <button
                 onClick={switchLocale}
-                className="hidden md:flex items-center gap-1.5 text-xs font-medium text-gray-600 hover:text-purple-600 border border-gray-200 hover:border-purple-300 px-3 py-1.5 rounded-full transition-all"
+                className="hidden md:flex items-center gap-1.5 text-xs font-medium text-gray-600 hover:text-[#e91e8c] border border-gray-200 hover:border-[#f48cbf] px-3 py-1.5 rounded-full transition-all"
               >
                 <Globe size={14} />
                 {otherLocale === "ar" ? "العربية" : "English"}
@@ -98,11 +98,11 @@ export default function Navbar() {
               {/* Cart */}
               <Link
                 href={`/${locale}/cart`}
-                className="relative p-2.5 rounded-full hover:bg-purple-50 transition-colors"
+                className="relative p-2.5 rounded-full hover:bg-pink-50 transition-colors"
               >
-                <ShoppingCart className="text-gray-700 hover:text-purple-600" size={22} />
+                <ShoppingCart className="text-gray-700 hover:text-[#e91e8c]" size={22} />
                 {count > 0 && (
-                  <span className="absolute -top-0.5 -right-0.5 bg-purple-600 text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center font-bold">
+                  <span className="absolute -top-0.5 -right-0.5 bg-[#e91e8c] text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center font-bold">
                     {count}
                   </span>
                 )}
@@ -111,15 +111,15 @@ export default function Navbar() {
               {/* Account */}
               <Link
                 href={`/${locale}/account`}
-                className="p-2.5 rounded-full hover:bg-purple-50 transition-colors"
+                className="p-2.5 rounded-full hover:bg-pink-50 transition-colors"
               >
-                <User className="text-gray-700 hover:text-purple-600" size={22} />
+                <User className="text-gray-700 hover:text-[#e91e8c]" size={22} />
               </Link>
 
               {/* Shop Now button - desktop */}
               <Link
                 href={`/${locale}/products`}
-                className="hidden md:inline-block bg-purple-600 hover:bg-purple-700 text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-all hover:scale-105 shadow-md shadow-purple-200"
+                className="hidden md:inline-block bg-[#e91e8c] hover:bg-[#c2177a] text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-all hover:scale-105 shadow-md shadow-pink-200"
               >
                 {isAr ? "تسوقي" : "Shop"}
               </Link>
